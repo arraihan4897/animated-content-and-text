@@ -1,0 +1,145 @@
+
+  .btn{
+    height: 45px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all .5s ease;
+  }
+  
+  .btn:hover {
+    background-color: white;
+    color: blue;
+    transform: translateY(-1px);
+    box-shadow: -10px 10px 10px rgb(144, 144, 237);
+  }
+
+
+ 
+
+
+
+
+  
+  h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    border-radius: 20px;
+  }
+  
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: rgb(76, 248, 248);
+    z-index: -1;
+    transition: transform 1s ease;
+  }
+  
+  h1 {
+    position: relative;
+    font-size: 4rem;
+    padding: 20px;
+    
+  }
+  
+
+  
+ 
+  
+   @media (orientation: landscape) {
+
+    body {
+      grid-auto-flow: column;
+    }
+  }
+
+
+
+
+
+
+
+
+
+/* favorite template */
+
+
+  body{
+    margin: auto;
+    font-size: 30px;
+    font-family: sans-serif;
+    background: #ebebeb;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  .div{
+     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    height: 250px;
+    width: 550px;
+    
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1cd8d2, #5fd7a5);
+    color: white;
+    margin: 20px ;
+    border-radius: 7px;
+  }
+  
+
+
+
+
+  /* mobile */
+  @media only screen and (max-width:500px) {
+    .container{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .div{
+    height: 150px;
+    width: 270px; 
+    }
+    h1 {
+        position: relative;
+        font-size: 5rem;
+        padding: 5px;
+        max-width: 450px;
+        margin: 0;
+        
+      }
+      body{
+        padding: 0;
+        margin: 0;
+      }
+   
+  }
